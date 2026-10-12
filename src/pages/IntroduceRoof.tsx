@@ -96,11 +96,11 @@ export default function IntroduceRoof() {
         <div className="flex flex-col-reverse md:flex-row items-start md:items-center md:justify-between gap-8 md:gap-0 min-h-[auto] md:h-[804px] max-w-[1152px] py-12 md:pb-[30px] md:pt-0 px-5 md:px-8 w-full">
           <div className="pr-hero-text flex flex-col gap-10 items-start max-w-[672px]">
             <div className="flex flex-col gap-4 items-start not-italic text-[#1f2129]">
-              <div className="font-['Pretendard:Bold',sans-serif] text-[32px] sm:text-[44px] md:text-[60px] leading-[1.3] flex flex-col gap-1">
-                <p>비어있는 지붕이</p>
-                <p>30년 발전소로</p>
-                <p>바뀝니다</p>
-              </div>
+              <h1 className="font-['Pretendard:Bold',sans-serif] text-[32px] sm:text-[44px] md:text-[60px] leading-[1.3] flex flex-col gap-1">
+                <span>비어있는 지붕이</span>
+                <span>30년 발전소로</span>
+                <span>바뀝니다</span>
+              </h1>
               <div className="font-['Pretendard:Regular',sans-serif] text-[14px] sm:text-[16px] md:text-[20px] flex flex-col gap-1">
                 <p className="leading-[1.6] break-keep">축사 · 공장 · 창고 지붕을 솔라캄에 소개해 주세요</p>
                 <p className="leading-[1.6] break-keep">초기 비용 0원, 시공·관리 솔라캄 전담, 수익은 지붕주 귀속</p>

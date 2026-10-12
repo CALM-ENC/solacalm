@@ -6,6 +6,7 @@ import {
   Outlet,
   useLocation,
 } from "react-router-dom";
+import Seo from "@/components/Seo";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Main from "@/pages/Main";
@@ -43,6 +44,7 @@ function KakaoButton() {
 function Layout() {
   return (
     <div className="flex min-h-screen flex-col bg-surface-warm">
+      <Seo />
       <ScrollToTop />
       <Navbar />
       <main className="flex-1">
@@ -54,9 +56,8 @@ function Layout() {
   );
 }
 
-export default function App() {
+export function AppRoutes() {
   return (
-    <BrowserRouter>
       <Routes>
         <Route element={<Layout />}>
           <Route path="/" element={<Main />} />
@@ -65,9 +66,12 @@ export default function App() {
           <Route path="/roof" element={<IntroduceRoof />} />
           <Route path="/contractor" element={<Contractor />} />
           <Route path="/partner" element={<SalesPartner />} />
-          <Route path="*" element={<Main />} />
+          <Route path="*" element={<div className="mx-auto max-w-[1152px] px-5 py-40"><h1 className="text-3xl font-bold">페이지를 찾을 수 없습니다</h1><p className="mt-4">주소를 확인하거나 <a href="/" className="underline">솔라캄 홈으로 이동하세요.</a></p></div>} />
         </Route>
       </Routes>
-    </BrowserRouter>
   );
+}
+
+export default function App() {
+  return <BrowserRouter><AppRoutes /></BrowserRouter>;
 }

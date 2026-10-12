@@ -130,10 +130,10 @@ export default function SalesPartner() {
               <p className="font-['Pretendard:Bold',sans-serif] text-[15px] md:text-[25px] leading-[1.5] text-[#7e8a96] not-italic">
                 영업 파트너 모집
               </p>
-              <div className="font-['Pretendard:Bold',sans-serif] text-[32px] sm:text-[44px] md:text-[60px] leading-[1.3] text-[#1f2129] not-italic flex flex-col gap-1">
-                <p>아는 지붕 한 곳이</p>
-                <p>수수료가 됩니다</p>
-              </div>
+              <h1 className="font-['Pretendard:Bold',sans-serif] text-[32px] sm:text-[44px] md:text-[60px] leading-[1.3] text-[#1f2129] not-italic flex flex-col gap-1">
+                <span>아는 지붕 한 곳이</span>
+                <span>수수료가 됩니다</span>
+              </h1>
               <div className="font-['Pretendard:Regular',sans-serif] text-[14px] sm:text-[16px] md:text-[20px] leading-[1.6] text-[#1f2129] not-italic flex flex-col gap-0.5">
                 <p className="break-keep">지붕주를 연결하여 계약을 성사시켜주세요</p>
                 <p className="break-keep">이후 인허가·시공·관리는 솔라캄이 맡아요</p>

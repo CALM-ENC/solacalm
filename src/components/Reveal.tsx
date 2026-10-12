@@ -14,10 +14,12 @@ export default function Reveal({
 }) {
   const ref = useRef<HTMLDivElement>(null);
   const [shown, setShown] = useState(false);
+  const [pending, setPending] = useState(false);
 
   useEffect(() => {
     const el = ref.current;
-    if (!el || shown) return;
+    if (!el || shown || !("IntersectionObserver" in window)) return;
+    setPending(true);
     const io = new IntersectionObserver(
       (entries) => {
         entries.forEach((e) => {
@@ -36,7 +38,7 @@ export default function Reveal({
   return (
     <Tag
       ref={ref as never}
-      className={`reveal ${shown ? "is-in" : ""} ${className}`}
+      className={`reveal ${shown ? "is-in" : pending ? "is-pending" : ""} ${className}`}
       style={{ animationDelay: `${delay}ms` }}
     >
       {children}

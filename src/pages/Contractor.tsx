@@ -103,11 +103,11 @@ export default function Contractor() {
               <p className="font-['Pretendard:Bold',sans-serif] text-[15px] md:text-[25px] leading-[1.5] text-[#7e8a96] not-italic">
                 시공사 파트너 모집
               </p>
-              <div className="font-['Pretendard:Bold',sans-serif] text-[32px] sm:text-[44px] md:text-[60px] leading-[1.3] text-[#1f2129] not-italic flex flex-col gap-1">
-                <p>영업은 저희가,</p>
-                <p>시공에만</p>
-                <p>집중하세요</p>
-              </div>
+              <h1 className="font-['Pretendard:Bold',sans-serif] text-[32px] sm:text-[44px] md:text-[60px] leading-[1.3] text-[#1f2129] not-italic flex flex-col gap-1">
+                <span>영업은 저희가,</span>
+                <span>시공에만</span>
+                <span>집중하세요</span>
+              </h1>
             </div>
             <a
               href="#contractor-form"

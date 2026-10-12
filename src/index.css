@@ -128,6 +128,9 @@ body {
   }
 }
 .reveal {
+  opacity: 1;
+}
+.reveal.is-pending {
   opacity: 0;
 }
 .reveal.is-in {
@@ -139,6 +142,7 @@ body {
     scroll-behavior: auto;
   }
   .reveal,
+  .reveal.is-pending,
   .reveal.is-in {
     opacity: 1;
     animation: none;

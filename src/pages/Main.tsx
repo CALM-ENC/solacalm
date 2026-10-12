@@ -325,10 +325,12 @@ export default function Main() {
                 transition: "opacity 0.35s ease, transform 0.35s ease",
               }}
             >
-              <p className="text-[26px] font-bold text-white sm:text-[32px] md:text-[34px]">{heroSlide.sub}</p>
-              <p className="text-[54px] font-bold leading-[1.05] text-[#e4fa5c] sm:text-[70px] md:text-[84px]">
+              <h1 className="flex flex-col gap-2.5">
+              <span className="block text-[26px] font-bold text-white sm:text-[32px] md:text-[34px]">{heroSlide.sub}</span>
+              <span className="block text-[54px] font-bold leading-[1.05] text-[#e4fa5c] sm:text-[70px] md:text-[84px]">
                 {heroSlide.main}
-              </p>
+              </span>
+              </h1>
               <p className="text-[14px] text-white/70">{heroSlide.note}</p>
             </div>
             <a

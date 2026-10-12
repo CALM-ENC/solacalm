@@ -124,10 +124,10 @@ export default function RentalRevenue() {
           <div className="pr-hero-text flex flex-[1_0_0] flex-col gap-10 items-start max-w-[672px] min-w-px">
             <div className="flex flex-col gap-4 items-start font-['Pretendard:Bold',sans-serif] not-italic">
               <p className="leading-[1.5] text-[#7e8a96] text-[15px] md:text-[25px]">임대수익 받기</p>
-              <div className="text-[#1f2129] text-[32px] sm:text-[44px] md:text-[60px] leading-[1.3] flex flex-col gap-1">
-                <p>투자금 0원으로</p>
-                <p>20년 확정 임대료</p>
-              </div>
+              <h1 className="text-[#1f2129] text-[32px] sm:text-[44px] md:text-[60px] leading-[1.3] flex flex-col gap-1">
+                <span>투자금 0원으로</span>
+                <span>20년 확정 임대료</span>
+              </h1>
             </div>
             <a
               href="#lead"
