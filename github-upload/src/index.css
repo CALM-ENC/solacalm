@@ -1,0 +1,150 @@
+@import 'tailwindcss';
+
+/* Pretendard — self-hosted in public/fonts/ */
+@font-face {
+  font-family: "Pretendard:Regular";
+  src: url("/fonts/Pretendard-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard:Medium";
+  src: url("/fonts/Pretendard-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard:Bold";
+  src: url("/fonts/Pretendard-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard:SemiBold";
+  src: url("/fonts/Pretendard-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-display: swap;
+}
+/* Pretendard Variable — all weights from one variable font file */
+@font-face {
+  font-family: "Pretendard Variable:Medium";
+  src: url("/fonts/PretendardVariable.woff2") format("woff2");
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard Variable:SemiBold";
+  src: url("/fonts/PretendardVariable.woff2") format("woff2");
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard Variable:Bold";
+  src: url("/fonts/PretendardVariable.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+}
+/* Base family for body text — single face per weight */
+@font-face {
+  font-family: "Pretendard";
+  src: url("/fonts/Pretendard-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  src: url("/fonts/Pretendard-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  src: url("/fonts/Pretendard-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Pretendard";
+  src: url("/fonts/Pretendard-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+}
+
+@theme {
+  --color-ink: #1f2129;
+  --color-ink-strong: #101211;
+  --color-olive: #7f910d;
+  --color-lime: #e9f64b;
+  --color-lime-soft: #f5f9e4;
+  --color-mute: #7e8a96;
+  --color-line: #e3e7ee;
+  --color-surface: #f2f3f5;
+  --color-surface-warm: #f4f5f3;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Pretendard", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", sans-serif;
+  color: #1f2129;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* The imported ROI design names local-only Figma font families. Scope the
+   webfont override to that design so its typography matches the site. */
+.power-roi-design,
+.power-roi-design * {
+  font-family: "Pretendard", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", sans-serif !important;
+}
+
+/* Power Revenue hero entrance (fires on load, not scroll) */
+@keyframes pr-rise {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: none; }
+}
+@keyframes pr-slide-right {
+  from { opacity: 0; transform: translateX(28px); }
+  to   { opacity: 1; transform: none; }
+}
+.pr-hero-text {
+  animation: pr-rise 0.85s cubic-bezier(0.22, 1, 0.36, 1) 0.08s both;
+}
+.pr-hero-img {
+  animation: pr-slide-right 0.85s cubic-bezier(0.22, 1, 0.36, 1) 0.28s both;
+}
+
+/* Scroll-reveal interaction */
+@keyframes sc-rise {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.reveal {
+  opacity: 1;
+}
+.reveal.is-pending {
+  opacity: 0;
+}
+.reveal.is-in {
+  animation: sc-rise 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal,
+  .reveal.is-pending,
+  .reveal.is-in {
+    opacity: 1;
+    animation: none;
+  }
+}

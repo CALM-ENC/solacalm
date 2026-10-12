@@ -1,0 +1,9 @@
+[build]
+  command = "pnpm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+# Only known pages are rewritten. Unknown URLs keep their real 404 response.
+# The same rules are emitted in dist/_redirects for manual drag-and-drop deploys.
